@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recuperar contraseña | AMAC</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/recuperar-contrasena.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+
+      <a class="logo" href="index.html">
+        <svg class="logo__icono" viewBox="0 0 60 28" aria-hidden="true">
+          <polyline
+            points="3,24 14,5 24,20 34,4 44,20 57,7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <span class="logo__texto">
+          <span class="logo__nombre">AMAC</span>
+          <span class="logo__lema">asociAMayores A.C.</span>
+        </span>
+      </a>
+
+    </div>
+  </header>
+
+  <main class="contenedor principal">
+
+    <a class="regresar" href="login.html">
+      ← Volver al inicio de sesión
+    </a>
+
+    <section class="recuperar">
+
+      <h1>Recuperar contraseña</h1>
+
+      <p>Te enviaremos un código a tu correo</p>
+
+      <form class="formulario">
+
+        <div class="campo-formulario">
+          <label for="correo">Correo electrónico</label>
+          <input
+            type="email"
+            id="correo"
+            name="correo"
+            placeholder="Ej. diana@correo.com"
+            required
+          >
+        </div>
+
+        <button class="boton boton--primario" type="button">
+          Enviar código
+        </button>
+
+        <h2 class="barra-titulo">Ya tengo mi código</h2>
+
+        <div class="formulario__fila">
+
+          <div class="campo-formulario">
+            <label for="codigo">Código de 6 números</label>
+            <input
+              type="text"
+              id="codigo"
+              name="codigo"
+              placeholder="Ej. 482913"
+              maxlength="6"
+              required
+            >
+          </div>
+
+          <div class="campo-formulario">
+            <label for="nueva-clave">Nueva contraseña</label>
+
+            <div class="campo-formulario__clave">
+              <input
+                type="password"
+                id="nueva-clave"
+                name="nueva-clave"
+                placeholder="Mínimo 8 caracteres"
+                required
+              >
+
+              <button type="button" class="campo-formulario__mostrar">
+                Mostrar
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="campo-formulario">
+          <label for="repetir-clave">
+            Repetir nueva contraseña
+          </label>
+
+          <div class="campo-formulario__clave">
+            <input
+              type="password"
+              id="repetir-clave"
+              name="repetir-clave"
+              placeholder="Escribe la misma contraseña"
+              required
+            >
+
+            <button type="button" class="campo-formulario__mostrar">
+              Mostrar
+            </button>
+          </div>
+        </div>
+
+        <div class="acciones">
+          <button class="boton boton--primario" type="submit">
+            Cambiar contraseña
+          </button>
+
+          <a class="boton boton--secundario" href="login.html">
+            Cancelar
+          </a>
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
