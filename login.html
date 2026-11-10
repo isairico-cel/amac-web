@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar sesión | AMAC</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Cuando el equipo suba variables.css, base.css, layout.css y componentes.css,
+       se agregan aquí arriba de login.css y se quita lo repetido. -->
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <a class="saltar-contenido" href="#principal">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado__interior">
+      <a class="logo" href="index.html" aria-label="AMAC, asociAMayores A.C. Ir al inicio">
+        <svg class="logo__icono" viewBox="0 0 60 28" aria-hidden="true" focusable="false">
+          <polyline points="3,24 14,5 24,20 34,4 44,20 57,7" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="logo__texto">
+          <span class="logo__nombre">AMAC</span>
+          <span class="logo__lema">asociAMayores A.C.</span>
+        </span>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="nav__lista">
+          <li><a class="nav__enlace" href="index.html">Vacantes</a></li>
+          <li><a class="nav__enlace" href="#">Conócenos</a></li>
+          <li><a class="nav__enlace" href="login.html" aria-current="page">Entrar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="principal" class="contenedor principal">
+    <h1 class="titulo-pagina">Iniciar sesión</h1>
+
+    <div class="login">
+      <fieldset class="selector-rol">
+        <legend class="selector-rol__leyenda">Elige cómo quieres entrar</legend>
+        <div class="roles">
+          <label class="rol">
+            <input type="radio" name="rol" id="rol-candidato" value="candidato" checked>
+            <svg class="rol__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>
+            <span>Candidato</span>
+          </label>
+          <label class="rol">
+            <input type="radio" name="rol" id="rol-empresa" value="empresa">
+            <svg class="rol__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="6" y="3" width="12" height="18" rx="1"/><path d="M10 7h1M13 7h1M10 11h1M13 11h1M10 15h1M13 15h1M11 21v-3h2v3"/></svg>
+            <span>Empresa</span>
+          </label>
+          <label class="rol">
+            <input type="radio" name="rol" id="rol-administrador" value="administrador">
+            <svg class="rol__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <span>Administrador</span>
+          </label>
+          <label class="rol">
+            <input type="radio" name="rol" id="rol-visitante" value="visitante">
+            <svg class="rol__icono" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.2-4.2"/></svg>
+            <span>Visitante</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <section class="panel panel--candidato" aria-labelledby="titulo-candidato">
+        <h2 class="barra-titulo" id="titulo-candidato">Entrar como candidato</h2>
+        <form class="formulario" action="#" method="post">
+          <div class="campo-formulario">
+            <label for="correo-candidato">Correo electrónico</label>
+            <input type="email" id="correo-candidato" name="correo" placeholder="Ej. diana@correo.com" autocomplete="email" required>
+          </div>
+          <div class="campo-formulario">
+            <label for="clave-candidato">Contraseña</label>
+            <div class="campo-formulario__clave">
+              <input type="password" id="clave-candidato" name="clave" autocomplete="current-password" required>
+              <button type="button" class="campo-formulario__mostrar" aria-label="Mostrar contraseña">Mostrar</button>
+            </div>
+          </div>
+          <button type="submit" class="boton boton--primario">Entrar</button>
+          <button type="button" class="boton boton--secundario">Entrar con Google</button>
+          <a class="enlace-ayuda" href="#">¿Olvidaste tu contraseña?</a>
+        </form>
+        <aside class="tarjeta-aviso" aria-labelledby="aviso-candidato">
+          <h3 id="aviso-candidato">¿Aún no tienes cuenta?</h3>
+          <p>Crea tu cuenta de candidato en pocos minutos.</p>
+          <a class="boton boton--acento" href="registro-candidato.html">Crear cuenta de candidato</a>
+        </aside>
+      </section>
+
+      <section class="panel panel--empresa" aria-labelledby="titulo-empresa">
+        <h2 class="barra-titulo" id="titulo-empresa">Entrar como empresa</h2>
+        <form class="formulario" action="#" method="post">
+          <div class="campo-formulario">
+            <label for="correo-empresa">Correo de la empresa</label>
+            <input type="email" id="correo-empresa" name="correo" placeholder="Ej. contacto@elroble.mx" autocomplete="email" required>
+          </div>
+          <div class="campo-formulario">
+            <label for="clave-empresa">Contraseña</label>
+            <div class="campo-formulario__clave">
+              <input type="password" id="clave-empresa" name="clave" autocomplete="current-password" required>
+              <button type="button" class="campo-formulario__mostrar" aria-label="Mostrar contraseña">Mostrar</button>
+            </div>
+          </div>
+          <button type="submit" class="boton boton--primario">Entrar</button>
+          <a class="enlace-ayuda" href="#">¿Olvidaste tu contraseña?</a>
+        </form>
+        <aside class="tarjeta-aviso" aria-labelledby="aviso-empresa">
+          <h3 id="aviso-empresa">¿Tu empresa aún no está registrada?</h3>
+          <p>AMAC revisará tus datos antes de que puedas publicar vacantes.</p>
+          <a class="boton boton--acento" href="#">Registrar mi empresa</a>
+        </aside>
+      </section>
+
+      <section class="panel panel--administrador" aria-labelledby="titulo-administrador">
+        <h2 class="barra-titulo" id="titulo-administrador">Entrar como administrador</h2>
+        <form class="formulario" action="#" method="post">
+          <div class="campo-formulario">
+            <label for="correo-administrador">Correo institucional</label>
+            <input type="email" id="correo-administrador" name="correo" placeholder="Ej. nombre@amac.org" autocomplete="email" required>
+          </div>
+          <div class="campo-formulario">
+            <label for="clave-administrador">Contraseña</label>
+            <div class="campo-formulario__clave">
+              <input type="password" id="clave-administrador" name="clave" autocomplete="current-password" required>
+              <button type="button" class="campo-formulario__mostrar" aria-label="Mostrar contraseña">Mostrar</button>
+            </div>
+          </div>
+          <button type="submit" class="boton boton--primario">Entrar</button>
+          <a class="enlace-ayuda" href="#">¿Olvidaste tu contraseña?</a>
+        </form>
+        <aside class="tarjeta-aviso" aria-labelledby="aviso-administrador">
+          <h3 id="aviso-administrador">Solo para el equipo de AMAC</h3>
+          <p>Si necesitas acceso, pídelo al equipo de AMAC.</p>
+        </aside>
+      </section>
+
+      <section class="panel panel--visitante" aria-labelledby="titulo-visitante">
+        <h2 class="barra-titulo" id="titulo-visitante">Entrar como visitante</h2>
+        <div class="formulario">
+          <p class="formulario__texto"><strong>Puedes entrar sin crear una cuenta y:</strong></p>
+          <ul class="lista-visitante">
+            <li>Ver las vacantes disponibles</li>
+            <li>Conocer a AMAC</li>
+            <li>Revisar los perfiles de las empresas</li>
+          </ul>
+          <a class="boton boton--primario" href="index.html">Entrar como visitante</a>
+        </div>
+        <aside class="tarjeta-aviso" aria-labelledby="aviso-visitante">
+          <h3 id="aviso-visitante">¿Quieres postularte?</h3>
+          <p>Para postularte a una vacante necesitas una cuenta de candidato.</p>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p class="pie__texto">¿Necesitas ayuda? Una persona de AMAC te atiende por teléfono.</p>
+      <!-- Cambiar por el teléfono real de AMAC (RF-052) -->
+      <a class="boton boton--acento pie__ayuda" href="tel:+520000000000">Pedir ayuda por teléfono</a>
+    </div>
+  </footer>
+</body>
+</html>
